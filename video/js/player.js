@@ -8,7 +8,7 @@ function init() {
     volume = document.getElementById("volume");
     
     play.addEventListener("click",startPlayback)
-    bar.addEventListener("click",()=>{changeVideoTiming(event)})
+    bar.addEventListener("click",changeVideoTiming)
 
     mmedia.muted=true;
 }
@@ -33,8 +33,11 @@ function status() {
         clearInterval(loop);
     }
 }
-function changeVideoTiming(e){
-    console.log(e.offsetX); 
+function changeVideoTiming(event){
+    console.log(event.offsetX);
+    mouseX = event.pageX - bar.offsetLeft;
+    newTime = mouseX*mmedia.duration/max;
+    mmedia.currentTime = newTime; 
     
 
 }
