@@ -41,7 +41,7 @@ nav:hover {
   padding: 2px 10px;
   width: 65px;
   border-radius: 10px;
-  border: 1px soild #000;
+  border: 1px solid #000;
 
   background: #ddd;
   font-weight: bold;
@@ -61,7 +61,7 @@ input[type="button"]:hover {
     height: 7px;
     padding: 2px;
     margin: 2px 5px;
-    border: 1px soild #ccc;
+    border: 1px solid #ccc;
 }
 #progress{
     width: 150px;
