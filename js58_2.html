@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 12. js58_2</title>
+    <style>
+      body {
+        animation: start 5s;
+      }
+
+      section {
+        width: 500px;
+        padding: 20px;
+        margin: 0 auto;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: space-around;
+      }
+      div {
+        width: 110px;
+        padding: 3px;
+        border: 1px solid cyan;
+        text-align: center;
+        cursor: pointer;
+      }
+      .fade {
+        transition: 0.5s;
+      }
+      .buttonOff{
+        background:#fff;
+          color:#000;
+      }
+      .buttonOn{
+        background:#00f;
+          color:#fff;
+      }
+      @keyframes start {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div onmouseover="showPic(id1,'winter.jpg')" id="id1">Зима</div>
+      <div onmouseover="showPic(id2,'spring.jpg')" id="id2">Весна</div>
+      <div onmouseover="showPic(id3,'summer.jpg')" id="id3">Лето</div>
+      <div onmouseover="showPic(id4,'autumn.jpg')" id="id4">Осень</div>
+    </section>
+    <section>
+      <img src="images/winter.jpg" id="pc" class="fade" alt="" />
+    </section>
+    <script>
+      images = {"id1":"winter.jpg","id2":"spring.jpg","id3":"summer.jpg","id4":"autumn.jpg"}
+      let showPic = (idn,path)=>{
+        menu = document.querySelectorAll("section>div");
+        menu.forEach(function(item,i,menu){
+          // item.toggleClass()
+          item.setAttribute("class","buttonOff");
+        });
+          pc.style.opacity = "0";
+          idn.setAttribute("class","buttonOn");
+          setTimeout("pic()",500);
+          pic = ()=>{
+        //   pc.src = `images\\${images[obj.id]}`;
+        pc.src = `images/${path}`;
+        //   pc.alt = `images\\${images[obj.id]}`;
+          pc.style.opacity = "1";
+          
+        }
+
+      }
+    </script>
+  </body>
+</html>

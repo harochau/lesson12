@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson12. Video</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="player">
+      <!-- <video  id="media" controls> default controls -->
+      <video id="media">
+        <source src="media/solarstone.mp4" />
+      </video>
+      <nav>
+        <div id="buttons">
+          <input type="button" value="Воспр." id="play" />
+          <input type="button" value="Звук" id="mute" />
+        </div>
+        <div id="bar">
+          <div id="progress"></div>
+        </div>
+        <div id="control">
+          <input type="range" min="0" max="1" step="0.1" value=0.6 name="" id="volume" />
+        </div>
+      </nav>
+    </section>
+  </body>
+  <script>
+    // media.play();
+  </script>
+</html>
