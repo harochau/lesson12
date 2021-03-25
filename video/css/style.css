@@ -6,9 +6,21 @@
 video {
     
   width: 100%;
-  border-radius: 30px;
-}
+  
+  /* border-radius: 30px; */
+  /* border: 1px solid green; */
 
+}
+#videoBox{
+    /* width: 320px; */
+    /* height: 320px; */
+    border-radius: 10px;
+    border: 1px solid green;
+    overflow:hidden;
+    
+    
+    
+}
 nav {
   display: flex;
   justify-content: space-around;

@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson12. Video</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/player.js"></script>
   </head>
   <body>
     <section id="player">
       <!-- <video  id="media" controls> default controls -->
-      <video id="media">
+          <div id="videoBox">
+      <video id="media" poster="../images/post.jpg">
         <source src="media/solarstone.mp4" />
       </video>
+    </div>
       <nav>
         <div id="buttons">
           <input type="button" value="Воспр." id="play" />
